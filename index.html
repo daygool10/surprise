@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Surpresa de Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fce4ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      background-color: #e91e63;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+    .surprise {
+      display: none;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .heart {
+      font-size: 80px;
+      color: red;
+      animation: glow 1.5s infinite alternate;
+      text-shadow: 0 0 10px #ff1744, 0 0 20px #f50057, 0 0 30px #ff1744;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 24px;
+      color: #880e4f;
+      font-weight: bold;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff1744, 0 0 10px #f50057, 0 0 15px #ff1744;
+        transform: scale(1);
+      }
+      to {
+        text-shadow: 0 0 20px #ff1744, 0 0 30px #f50057, 0 0 40px #ff1744;
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button id="botao" onclick="mostrarSurpresa()">Clique para a surpresa</button>
+
+  <div class="surprise" id="surpresa">
+    <div class="heart">❤️</div>
+    <div class="message">I love you</div>
+  </div>
+
+  <script>
+    function mostrarSurpresa() {
+      // Mostrar a surpresa
+      document.getElementById('surpresa').style.display = 'block';
+      // Esconder o botão
+      document.getElementById('botao').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
